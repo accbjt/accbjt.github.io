@@ -173,7 +173,7 @@ $(document).ready(function(){
     */
     $('#twitterfeed-slider').tweet({
         modpath: 'plugins/twitter/',
-        username: 'TheGridelicious',
+        username: '@bjtran1234',
         count: 3
     });
     
