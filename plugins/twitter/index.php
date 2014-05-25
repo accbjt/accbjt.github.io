@@ -30,10 +30,10 @@ class ezTweet {
     private $consumer_secret = '';
 
     // Your Twitter App Access Token
-    private $user_token = 'RrOuqcuCS91i2DGYyv66JLw90';
+    private $user_token = '1925307584-heASUpuZvpsf6XiSZfJ40g6O8yYt39vRsgCY6Bg';
 
     // Your Twitter App Access Token Secret
-    private $user_secret = 'yvjJNwCxRFv9txgyKL84R2QOJnoagCUm30gYyPTYkAcXRIACYv';
+    private $user_secret = 'CBNmiQNZLFdGr0tx2YkapKTEnVlVraHvQCxHoRASFp8Wy';
 
     // Path to tmhOAuth libraries
     private $lib = './lib/';
