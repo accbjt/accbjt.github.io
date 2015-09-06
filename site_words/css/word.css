@@ -1,0 +1,172 @@
+#underlineText{
+	position: absolute;
+	top: 200px;
+	text-align: center;
+}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	section.player{
+		display:block;
+		text-align: center;
+		width: 700px;
+	}
+	#gameScreen{
+		background-color: white;
+		display:none;
+		height:456px;
+		margin-bottom: 10px;
+	}
+} /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+#gameScreen{
+		background-color: white;
+		display:block;
+		height:450px;
+		margin-bottom: 35px;
+	}
+#mainScreen{
+		display:block;
+}
+section.player{
+	margin-top: 20px;
+	display:none;
+	text-align: center;
+}
+section.player a{
+	position: absolute;
+	width:175px;
+	height:175px;
+	margin:10px;
+}
+section.player a.fullscreen-play{
+	position: absolute;
+	width: 92%;
+	height: 97%;
+	z-index: 1;
+	background-image: url("../img/videoPlayButton.png");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+section.player a.fullscreen-pause{
+	position: absolute;
+	width: 92%;
+	height: 97%;
+	z-index: -1;
+}
+
+.close{
+	height: 50px !important;
+	width: 50px !important;
+	position: absolute;
+	left: 910px;
+	z-index:2;
+}
+
+#keyboard{
+	display: block;
+	text-align: center;
+}
+iframe{
+	width: 100%;
+	height: 100%;
+}
+td.fullscreen{
+	width: 1000px;
+	height: 720px;
+}
+.searchScreen td{
+	text-align: center;
+}
+table{
+	margin-top:10px;
+}
+.wordForm{
+	display:block;
+	text-align: center;
+}
+body{
+	background-color: rgb(193, 237, 252);
+}
+#inputText{
+	text-align: center;
+}
+#inputText p{
+	font-size: 100px;
+}
+#underlineText{
+	position: absolute;
+	top: 200px;
+	text-align: center;
+}
+#underlineText p{
+	color: rgb(192, 187, 187);
+	font-size: 100px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+#currentWord{
+	display: none;
+	text-align: center;
+}
+#currentWord p{
+	margin-bottom: -25px;
+	margin-top: 75px;
+	font-size:100px;
+}
+#wordImage{
+	text-align: center;
+}
+#wordImage img{
+	margin: 30px;
+}
+.listOfWords{
+	list-style-type: none;
+}
+#keyboard li{
+	padding: 4px;
+}
+.row-1{
+	margin: 0px 170px 0px 170px;
+	width: 800px;
+}
+
+.row-2{
+	margin: 0px 130px 0px 130px;
+	width: 800px;
+}
+.sound-play{
+	position: absolute;
+	top:100px;
+	left:363px;
+	width: 300px;
+	height: 150px;
+	background-image: url('../img/play_button.png');
+	background-size: 300px 150px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#matchFullWord{
+	display: none;
+}
+
+#matchFullWord ul{
+	margin-top: 75px;
+	margin-left: 250px;
+	margin-right: auto;
+	width: 499px;
+}
+
+#matchFullWord li{
+}
+
+#matchFullWord a{
+	width: 500px;
+	font-size: 70px;
+}
+
+.video-image{
+	width: 175px;
+	height: 135px;
+	margin: 5px;
+}

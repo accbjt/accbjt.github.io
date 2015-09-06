@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/foundation.css" />
+</head>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div class='row'>
+      <div id="number" class='large-2 columns large-centered' style='text-align: center;'><p style="font-size: 250px;">0</p></div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns large-centered' style='text-align: center;'><a href="#" class='button'>Click</a></div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script>
+
+    $(function(){
+      $('.button').on('click', function(){
+        var number = Math.floor(Math.random()*100)
+        $('#number p').empty().append(number);
+      });
+    });
+
+    </script>
+  </body>
+</html>
