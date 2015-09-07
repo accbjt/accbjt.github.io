@@ -41,7 +41,7 @@ function chosenVideoToPlay(){
         $(this).parent().append('<a href="#" class="button radius close">X</a><div id="videoPlayer"></div>')
         youtubeSetup(index);
         $(this).parent().addClass("fullscreen");
-        $(this).parent().parent().siblings().hide();
+        $(this).parent().parent().siblings().remove();
         $(this).unbind('click');
         close();
   });
