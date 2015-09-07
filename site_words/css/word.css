@@ -44,6 +44,10 @@ section.player a.fullscreen-play{
   width: 100vw;
   height: 100vh;
 	z-index: 1;
+	background-image: url("../img/videoPlayButton.png");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
 }
 section.player a.fullscreen-pause{
 	position: absolute;
@@ -52,10 +56,6 @@ section.player a.fullscreen-pause{
   width: 100vw;
   height: 100vh;
 	z-index: -1;
-	background-image: url("../img/videoPlayButton.png");
-	background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 .close{
