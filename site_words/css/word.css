@@ -38,14 +38,16 @@ section.player a{
 	margin:10px;
 }
 section.player a.fullscreen-play{
-	position: absolute;
-	width: 92%;
-	height: 97%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
 	z-index: 1;
 	background-image: url("../img/videoPlayButton.png");
 	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+  background-attachment: fixed;
+  background-position: center; 
 }
 section.player a.fullscreen-pause{
 	position: absolute;
