@@ -61,7 +61,7 @@ function searchWordClick(){
 
 function relatedVideos(listOfVideos){
 	$.ajax({
-    url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId='+listOfVideos[Math.floor(Math.random()*25)+1].videoId+'&safeSearch=strict&type=video&maxResults=50&videoDuration=short&key=AIzaSyDw_LwtiRuFZSpqSMDRn7Oo9K0Ch2SIVnI',
+    url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId='+listOfVideos[Math.floor(Math.random()*25)+1].videoId+'&safeSearch=strict&type=video&relevanceLanguage=en&maxResults=50&videoDuration=short&key=AIzaSyDw_LwtiRuFZSpqSMDRn7Oo9K0Ch2SIVnI',
     dataType: "json",
     success:  function(data) {
       var youtubeJsonList = data.items
@@ -96,13 +96,15 @@ function relatedVideos(listOfVideos){
 
 function searchForVideos(){
   $.ajax({
-    url: 'https://www.googleapis.com/youtube/v3/search?part=snippet%20&q='+searchFor+'%20&type=video&videoDuration=short&maxResults=50&safeSearch=strict&key=AIzaSyDw_LwtiRuFZSpqSMDRn7Oo9K0Ch2SIVnI',
+    url: 'https://www.googleapis.com/youtube/v3/search?part=snippet%20&q='+searchFor+'%20&type=video&videoDuration=short&relevanceLanguage=en&maxResults=50&safeSearch=strict&key=AIzaSyDw_LwtiRuFZSpqSMDRn7Oo9K0Ch2SIVnI',
     dataType: "json",
     success:  function(data) {
       var youtubeJsonList = data.items
       youtubeJsonList.forEach(function(data, i){
        videos.push({videoId:data.id.videoId, thumbnail:data.snippet.thumbnails.default.url});
     	})
+
+    	debugger
 
     	videos = shuffle(videos);
 
