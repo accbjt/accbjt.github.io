@@ -50,14 +50,14 @@ var playerState;
 var iframeId
 
 function close(){
-  // $('.close').on('click', function(){
+  $('.close').on('click', function(){
     $('iframe').remove();
       $('.player table').remove();
       videos = [];
       videoThumbnails = [];
       playerState = undefined;
       resetPlayer();
-  // });
+  });
 };
 
 var setTimerSeconds = 10;
