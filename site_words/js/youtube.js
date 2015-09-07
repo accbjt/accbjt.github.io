@@ -50,14 +50,14 @@ var playerState;
 var iframeId
 
 function close(){
-  // $('.close').on('click', function(){
+  $('.close').on('click', function(){
     $('iframe').remove();
       $('.player table').remove();
       videos = [];
       videoThumbnails = [];
       playerState = undefined;
       resetPlayer();
-  // });
+  });
 };
 
 var setTimerSeconds = 10;
@@ -86,7 +86,6 @@ function playPauseVideo(){
     playerState = 'play'
     var duration = players.getDuration();
     players.unMute();
-    players.playVideo();
     $('.fullscreen-pause').css('z-index', '1');
     // checkPlayerState();
   }
@@ -115,7 +114,7 @@ function playPauseVideo(){
   function play(){
     $('.fullscreen-pause').bind('click', function(){
       playerState = 'pause'
-      players.pauseVideo();
+      players.playVideo();
       $(this).unbind('click');
       console.log('pause')
       $(this).addClass('fullscreen-play');
@@ -127,7 +126,7 @@ function playPauseVideo(){
   function pause(){
      $('.fullscreen-play').bind('click', function(){
       playerState = 'play'
-      players.playVideo();
+      players.pauseVideo();
       $(this).unbind('click');
       console.log('play')
       $(this).addClass('fullscreen-pause');
