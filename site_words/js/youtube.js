@@ -87,29 +87,32 @@ function playPauseVideo(){
     playerState = 'play'
     var duration = players.getDuration();
     players.unMute();
-    checkPlayerState();
+    players.playVideo();
+    $('.fullscreen-pause').css('z-index', '1');
+    // checkPlayerState();
   }
 
-  function checkPlayerState(){
-    if(players.getPlayerState() !== 0 ){
-      setTimeout(function(){
-       checkPlayerState();
-       console.log('check');
-        if(players.getPlayerState() === 1 && count === 0){
-          $('.fullscreen-pause').css('z-index', '1')
-          count = 1
-        }
-     },1000)
-    }else{
-      console.log('stopped')
-      $('iframe').remove();
-      $('.player table').remove();
-      videos = [];
-      videoThumbnails = [];
-      playerState = undefined;
-      resetPlayer();
-    }
-  };
+  // function checkPlayerState(){
+  //   if(players.getPlayerState() !== 0 ){
+  //     setTimeout(function(){
+  //      // checkPlayerState();
+  //      // console.log('check');
+  //       if(players.getPlayerState() === 1 && count === 0){
+  //         $('.fullscreen-pause').css('z-index', '1')
+  //         count = 1
+  //       }
+  //    },1000)
+  //   }else{
+  //     console.log('stopped')
+  //     $('iframe').remove();
+  //     $('.player table').remove();
+  //     videos = [];
+  //     videoThumbnails = [];
+  //     playerState = undefined;
+  //     resetPlayer();
+  //   }
+  // };
+
   function play(){
     $('.fullscreen-pause').bind('click', function(){
       playerState = 'pause'
