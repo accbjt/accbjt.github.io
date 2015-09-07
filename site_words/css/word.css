@@ -51,8 +51,10 @@ section.player a.fullscreen-play{
 }
 section.player a.fullscreen-pause{
 	position: absolute;
-	width: 92%;
-	height: 97%;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
 	z-index: -1;
 }
 

@@ -10,7 +10,6 @@ var videoThumbnails = [];
 
 function youtubeSetup(i){
   function onYouTubeIframeAPIReady(i) {
-    console.log('creating youtube')
     players = new YT.Player('videoPlayer', {
       height: '390',
       width: '640',
