@@ -104,8 +104,6 @@ function searchForVideos(){
        videos.push({videoId:data.id.videoId, thumbnail:data.snippet.thumbnails.default.url});
     	})
 
-    	debugger
-
     	videos = shuffle(videos);
 
     	relatedVideos(videos, searchFor)
