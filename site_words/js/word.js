@@ -84,7 +84,7 @@ function relatedVideos(listOfVideos){
     table.appendTo('section.player');
     $('.player td').each(function(index){
       // $(this).append('<a href="#"></a><div id="videoPlayer'+index+'"></div>')
-      $(this).append('<a href="#"></a><img class="video-image" src='+videos[index].thumbnail+'></div>')
+      $(this).append('<img class="video-image" src='+videos[index].thumbnail+' data-id='+videos[index].videoId+'>')
     })
     
     // onYouTubeIframeAPIReady();

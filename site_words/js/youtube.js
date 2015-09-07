@@ -28,22 +28,8 @@ function youtubeSetup(i){
 };
 
 function chosenVideoToPlay(){
-  $('.player a').on('click', function() {
-    $(this)
-      .next()
-        $(this).parent().siblings().hide();
-        $(this).parent().children('img').hide();
-        $(this).addClass("fullscreen-pause");
-        console.log("chosen video play "+$(this).parent().children('img').attr('src'));
-        var videoIndex = $(this).parent().children('img').attr('src');
-        var videoImages = videos.map(function(video){return video.thumbnail});
-        var index = videoImages.indexOf(videoIndex);
-        $(this).parent().append('<a href="#" class="button radius close">X</a><div id="videoPlayer"></div>')
-        youtubeSetup(index);
-        $(this).parent().addClass("fullscreen");
-        $(this).parent().parent().siblings().remove();
-        $(this).unbind('click');
-        close();
+  $('.player img').on('click', function(e) {
+    window.location = "youtube.html#"+e.currentTarget.dataset.id;
   });
 };
 var playerState;
