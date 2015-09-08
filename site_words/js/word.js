@@ -12,7 +12,88 @@ var listOfWords = ['see','my','to','and','go','is','said','the','for','play','ca
 	videoIndex = 0,
 	playerButton = $('span.player a'),
 	level = 0,
-	searchWords = ['full time kid','frozen','pokemon','minecraft','doggy','lego','barbie','hello kitty','digimon','kitty','yo gabba gabba!','sesame street','fairies','teeanage mutant ninja turtles','how to train a dragon','monster high','tinker bell','octonauts','kid snippets','kid science','monsters ink','stawberry shortcake','winnie the pooh','polly pocket', 'disney', 'princess'],
+	searchWords = [
+		{ 
+			name:'full time kid', 
+			image:'https://i.ytimg.com/vi/mc26BHPFydc/default.jpg'
+		},
+		{ name: 'frozen',
+			image: 'https://i.ytimg.com/vi/moSFlvxnbgk/default.jpg'
+		},
+		{
+			name: 'kid science',
+			image: 'https://i.ytimg.com/vi/ZjTifsUvcBI/default.jpg'
+		},
+		{
+			name: 'pokemon',
+			image: 'https://i.ytimg.com/vi/tAczll2cjMo/default.jpg'
+		},
+		{
+			name: 'minecraft',
+			image: 'https://i.ytimg.com/vi/Ku0GahgNnJ4/default.jpg'
+		},
+		{
+			name: 'lego',
+			image: 'https://i.ytimg.com/vi/lVl6UxiDQQs/default.jpg'
+		},
+		{
+			name: 'barbie',
+			image: 'https://i.ytimg.com/vi/0Mv9hD3-8qg/default.jpg'
+		},
+		{
+			name: 'shopkins',
+			image: 'https://i.ytimg.com/vi/P_TO7VdKnLU/default.jpg'
+		},
+		{
+			name: 'how to train a dragon',
+			image: 'https://i.ytimg.com/vi/T9KYlBYr4Ms/default.jpg'
+		},
+		{
+			name: 'cookie swirl c',
+			image: 'https://i.ytimg.com/vi/7ihWchxoz2o/default.jpg'
+		},
+		{
+			name: 'inside out',
+			image: 'https://i.ytimg.com/vi/8Cn1pYnAZSE/default.jpg'
+		},
+		{
+			name: 'sofia the first',
+			image: 'https://i.ytimg.com/vi/0I0oKknVlwg/default.jpg'
+		},
+		{
+			name: 'princess',
+			image: 'https://i.ytimg.com/vi/CtyOC6ayKoU/default.jpg'
+		},
+		{
+			name: 'ever after high',
+			image: 'https://i.ytimg.com/vi/McpbMMSQh18/default.jpg'
+		},
+		{
+			name: 'surprise toys',
+			image: 'https://i.ytimg.com/vi/6QG4n3-rKTs/default.jpg'
+		},
+		{
+			name: 'monster high',
+			image: 'https://i.ytimg.com/vi/qlMsPRu981g/default.jpg'
+		},
+		{
+			name: 'my little pony',
+			image: 'https://i.ytimg.com/vi/boiXc3xjUJc/default.jpg'
+		},
+		{
+			name: 'minions',
+			image: 'https://i.ytimg.com/vi/qTSDL94_Y7M/default.jpg'
+		},
+		{
+			name: 'tiny toons',
+			image: 'https://i.ytimg.com/vi/GtPxTkcTEgs/default.jpg'
+		},
+		{
+			name: 'mickey mouse',
+			image: 'https://i.ytimg.com/vi/qHHaYpdpsrM/default.jpg'
+		}
+	]
+
 	searchFor = '';
 
 shuffle(listOfWords);
@@ -40,10 +121,11 @@ function createSearchWordButton(){
 
       table.appendTo('.searchScreen section');
       $('.searchScreen td').each(function(index){
-        $(this).append(searchWords[index])
+        $(this).append('<img src="'+searchWords[index].image+'"></img>')
+        $(this).data('search-word', searchWords[index].name);
       })
       $('table').addClass('medium-12 columns');
-      $('td').addClass('button round');
+      $('td').addClass('button');
       $('tr').addClass('medium-12 medium-centered');
       $('tbody').css('text-align','center');
       $('td').css('margin','5px').css('font-size','50px');
@@ -53,7 +135,7 @@ function createSearchWordButton(){
 
 function searchWordClick(){
 	$('table td').on('click', function(){
-		searchFor = toQueryString($(this).text());
+		searchFor = toQueryString($(this).data("search-word"));
 		$('.searchScreen table').remove();
 		searchForVideos();
 	});
