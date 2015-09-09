@@ -15,82 +15,82 @@ var listOfWords = ['see','my','to','and','go','is','said','the','for','play','ca
 	searchWords = [
 		{ 
 			name:'full time kid', 
-			image:'https://i.ytimg.com/vi/mc26BHPFydc/default.jpg'
+			image:'http://i.ytimg.com/vi/tvH8iWgOR7k/hqdefault.jpg'
 		},
 		{ name: 'frozen',
-			image: 'https://i.ytimg.com/vi/moSFlvxnbgk/default.jpg'
+			image: 'https://pmcvariety.files.wordpress.com/2013/07/frozen_wide.jpg?w=670&h=377&crop=1'
 		},
 		{
 			name: 'kid science',
-			image: 'https://i.ytimg.com/vi/ZjTifsUvcBI/default.jpg'
+			image: 'http://smvdiscoverymuseum.org/wp-content/uploads/2014/07/Science-for-Kids-1.jpg'
 		},
 		{
 			name: 'pokemon',
-			image: 'https://i.ytimg.com/vi/tAczll2cjMo/default.jpg'
+			image: 'http://ocala.cgashows.com/wp-content/uploads/2015/03/Pokemon.jpg'
 		},
 		{
 			name: 'minecraft',
-			image: 'https://i.ytimg.com/vi/Ku0GahgNnJ4/default.jpg'
+			image: 'http://westportlibrary.org/sites/default/files/field_image/page/2013/11/Minecraft%20logo.jpg'
 		},
 		{
 			name: 'lego',
-			image: 'https://i.ytimg.com/vi/lVl6UxiDQQs/default.jpg'
+			image: 'https://www.ainsworthmemoriallibrary.org/sites/ainsworthmemoriallibrary.org/files/pictures/Lego.jpg'
 		},
 		{
 			name: 'barbie',
-			image: 'https://i.ytimg.com/vi/0Mv9hD3-8qg/default.jpg'
+			image: 'http://images.amazon.com/images/G/01/toys/detail-page/2011/Mattel-B002MUANJE-3.jpg'
 		},
 		{
 			name: 'shopkins',
-			image: 'https://i.ytimg.com/vi/P_TO7VdKnLU/default.jpg'
+			image: 'http://shopkinsworld.com/media/1002/103561m_r00s01_spks1_shopkins_webisodebanner_fa.jpg'
 		},
 		{
 			name: 'how to train a dragon',
-			image: 'https://i.ytimg.com/vi/T9KYlBYr4Ms/default.jpg'
+			image: 'http://www.cinemablend.com/images/news_img/67028/How_To_Train_Your_Dragon_3_67028.jpg'
 		},
 		{
 			name: 'cookie swirl c',
-			image: 'https://i.ytimg.com/vi/7ihWchxoz2o/default.jpg'
+			image: 'https://s-media-cache-ak0.pinimg.com/736x/c5/e8/fd/c5e8fdf829808bca882446264610445c.jpg'
 		},
 		{
 			name: 'inside out',
-			image: 'https://i.ytimg.com/vi/8Cn1pYnAZSE/default.jpg'
+			image: 'http://moviecitynews.com/wp-content/uploads/2015/06/inside-out-651.jpg'
 		},
 		{
 			name: 'sofia the first',
-			image: 'https://i.ytimg.com/vi/0I0oKknVlwg/default.jpg'
+			image: 'http://s7.leapfrog.com/is/image/LeapFrog/disney-sofia-the-first-a-princess-thing-ebook-app_58710-96914_1?$prod-lg$&$label=eBook'
 		},
 		{
 			name: 'princess',
-			image: 'https://i.ytimg.com/vi/CtyOC6ayKoU/default.jpg'
+			image: 'http://wondersofdisney3.yolasite.com/resources/princesses/princesses.gif'
 		},
 		{
 			name: 'ever after high',
-			image: 'https://i.ytimg.com/vi/McpbMMSQh18/default.jpg'
+			image: 'http://www.everafterhigh.com/en-us/Images/quiz-Thronecoming-promo_tcm571-180232.jpg'
 		},
 		{
 			name: 'surprise toys',
-			image: 'https://i.ytimg.com/vi/6QG4n3-rKTs/default.jpg'
+			image: 'http://i.ytimg.com/vi/cfkplRRApQc/hqdefault.jpg'
 		},
 		{
 			name: 'monster high',
-			image: 'https://i.ytimg.com/vi/qlMsPRu981g/default.jpg'
+			image: 'https://pmcvariety.files.wordpress.com/2014/05/monsters-high-mattel.jpg?w=670&h=377&crop=1'
 		},
 		{
 			name: 'my little pony',
-			image: 'https://i.ytimg.com/vi/boiXc3xjUJc/default.jpg'
+			image: 'https://i.ytimg.com/vi/1nsvDYw1qr0/hqdefault.jpg'
 		},
 		{
 			name: 'minions',
-			image: 'https://i.ytimg.com/vi/qTSDL94_Y7M/default.jpg'
+			image: 'http://www.buildabear.com/public/images/initiatives/minions/minionLogo.png'
 		},
 		{
 			name: 'tiny toons',
-			image: 'https://i.ytimg.com/vi/GtPxTkcTEgs/default.jpg'
+			image: 'https://upload.wikimedia.org/wikipedia/en/1/17/Tinytoons.jpg'
 		},
 		{
 			name: 'mickey mouse',
-			image: 'https://i.ytimg.com/vi/qHHaYpdpsrM/default.jpg'
+			image: 'http://www.kindertube.nl/mickey-mouse-clubhouse/images/7PI2glOdnPA.jpg'
 		}
 	]
 
