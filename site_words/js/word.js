@@ -7,7 +7,7 @@ $(document).foundation();
 // var json_str = JSON.stringify(wordPicked);
 // createCookie('mycookie', json_str);
 
-var listOfWords = ['see','my','to','and','go','is','said','the','for','play','can','you','me','it','big','in','we','not','down','where','little','help','like','have','she','are','was','he','they','with','on','this','at','what','do','no','want','who','but','a','up','his','him','had','yes','baby','banana','car','cat','chimpanzee','clap','diaper','dog','milk','rhinoceros','spider'],
+var listOfWords = ['see','my','to','and','go','is','said','the','for','play','can','you','me','it','big','in','we','not','down','where','little','help','like','have','she','are','was','he','they','with','on','this','at','what','do','no','want','who','but','a','up','his','him','had','yes','baby','banana','car','cat','clap','diaper','dog','milk','spider'],
 	wordIndex = 0,
 	videoIndex = 0,
 	playerButton = $('span.player a'),
@@ -143,7 +143,7 @@ function searchWordClick(){
 
 function relatedVideos(listOfVideos){
 	$.ajax({
-    url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId='+listOfVideos[Math.floor(Math.random()*25)+1].videoId+'&safeSearch=strict&type=video&relevanceLanguage=en&maxResults=50&videoDuration=short&key=AIzaSyDw_LwtiRuFZSpqSMDRn7Oo9K0Ch2SIVnI',
+    url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId='+listOfVideos[Math.floor(Math.random()*25)+1].videoId+'&safeSearch=strict&type=video&relevanceLanguage=en&maxResults=20&videoDuration=short&key=AIzaSyDw_LwtiRuFZSpqSMDRn7Oo9K0Ch2SIVnI',
     dataType: "json",
     success:  function(data) {
       var youtubeJsonList = data.items
