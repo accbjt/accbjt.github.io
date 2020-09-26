@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <a-scene
+      arjs
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector
+      id="scene"
+    >
+      <a-assets>
+        <a-asset-item id="box" src="assets/outer-box.glb"></a-asset-item>
+        <a-asset-item id="holder" src="assets/holder.glb"></a-asset-item>
+        <a-asset-item id="storage" src="assets/roach-storage.glb"></a-asset-item>
+      </a-assets>
+
+      <a-entity camera look-controls>
+        <a-marker markerhandler preset='custom' type='pattern' url='assets/pattern-cookies.patt'>
+          <a-entity
+            id="box-model"
+            position="0, .25, 0"
+            scale=".15, .15, .15"
+            rotation="0 0 0"
+            gltf-model="#box"
+            animation-mixer="clip: none"
+          ></a-entity>
+          <a-entity
+            id="holder-model"
+            position="0, .25, 0"
+            scale=".15, .15, .15"
+            rotation="0 0 0"
+            gltf-model="#holder"
+            animation-mixer="clip: none"
+          ></a-entity>
+          <a-entity
+            id="storage-model"
+            position="0, .25, 0"
+            scale=".15, .15, .15"
+            rotation="0 0 0"
+            gltf-model="#storage"
+            animation-mixer="clip: none"
+          ></a-entity>
+        </a-marker>
+      </a-entity>
+    </a-scene>
+    <script>
+      let currentAnimation = 0;
+
+      document.getElementsByTagName('body')[0].addEventListener('click', () => {
+        const box = document.getElementById('box-model');
+        const holder = document.getElementById('holder-model');
+        const storage = document.getElementById('storage-model');
+
+        const sequence = [
+          () => {
+            box.setAttribute('animation-mixer', {
+              clip: 'open-box',
+              loop: 'once',
+              crossFadeDuration: 0.4,
+              clampWhenFinished: true,
+            });
+          },
+          () => {
+            holder.setAttribute('animation-mixer', {
+              clip: 'lift-holder',
+              loop: 'once',
+              crossFadeDuration: 0.4,
+              clampWhenFinished: true,
+            });
+          },
+          () => {
+            storage.setAttribute('animation-mixer', {
+              clip: 'lift-storage',
+              loop: 'once',
+              crossFadeDuration: 0.4,
+              clampWhenFinished: true,
+            });
+          },
+          () => {
+            storage.setAttribute('animation-mixer', {
+              clip: 'none',
+            });
+          },
+          () => {
+            holder.setAttribute('animation-mixer', {
+              clip: 'none',
+            });
+          },
+          () => {
+            box.setAttribute('animation-mixer', {
+              clip: 'none',
+            });
+          },
+        ]
+
+        sequence[currentAnimation]();
+        if (currentAnimation === sequence.length -1) {
+          currentAnimation = 0;
+        } else {
+          currentAnimation = currentAnimation + 1;
+        }
+      });
+    </script>
+  </body>
+</html>
